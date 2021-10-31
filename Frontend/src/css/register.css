@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Kufam:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.register-container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.register-container .registration-login-success-loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.548);
+    z-index: 999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.register-container .registration-login-success-loader .loader{
+    transform: scale(1.5);
+}
+.register-container .left-container{
+    flex: 0.4;
+    background-color: #343434;
+}
+.register-container .right-container{
+    flex: 0.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.register-container .right-container .registration-login-error{
+    background-color: rgba(255, 0, 0, 0.644);
+    width: 100%;
+    max-width: 600px;
+    color: white;
+    padding: 10px 5px 2px 5px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid red;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.register-container .right-container .registration-login-error .registration-login-error-icon{
+    font-size: 25px;
+    padding-right: 5px;
+    transform: translateY(-4px);
+}
+.register-container .right-container .registration-login-error h5{
+    font-weight: 600;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.right-container form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px !important;
+}
+.register-container .right-container .first-last-name-container{
+    display: flex;
+}
+.left-sub-container .logo-container h1{
+    font-family: 'Gugi', cursive;
+    font-style: normal;
+    font-weight: normal;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 10px;
+    font-size: 25px;
+    padding-right: 5px;
+    color: white;
+}
+.left-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left-sub-container .logo-container{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.left-sub-container h2,.left-sub-container h5{
+    letter-spacing: 3px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 60px;
+    padding-top: 20px;
+    color: rgb(185, 185, 185);
+}
+.left-sub-container h3{
+    padding-bottom: 2px;
+    font-size: 15px;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.left-sub-container h3 .signin-link{
+    color: red;
+    text-decoration: none;
+}
+.left-sub-container h3 .signin-link:hover{
+    text-decoration: underline;
+}
+.btn-container{
+    margin: 20px;
+    border: 0;
+    background-color:red;
+    color:white;
+    font-weight: 600;
+    outline: none;
+    padding: 6px;
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+  .password-container{
+      width: 100%;
+      max-width: 600px;
+      position: relative;
+      margin: 23px;
+  }
+  .password-container input{
+    outline: none;
+    border: 0;
+    width: 100%;
+    border-bottom: 1px dotted #343434;
+    color: black;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    background: white;
+  }
+.password-container label{
+    font-size: 16px;
+    pointer-events: none;
+    position: absolute;
+    transform: translateY(5px);
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: rgb(107, 107, 107);
+}
+.password-container:hover .password-rules{
+    display: block;
+}
+
+.force-show{
+    display: block !important;
+}
+.password-rules{
+    padding: 5px 2px 2px 2px ;
+    position: absolute;
+    width: 200px;
+    background-color: white;
+    box-shadow: 0 0 8px rgb(194, 194, 194);
+    border-radius: 10px;
+    bottom: 15px;
+    transform: translateX(150px);
+    z-index: 999;
+    display: none;
+  }
+  .password-rules ul{
+    width: 90%;
+    margin-left: auto;
+  }
+  .password-rules li{
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(107, 107, 107);
+  }
+
+.password-container input:focus ~ label,.password-container input:not(:placeholder-shown) ~ label{
+    transform: translateY(-22px);
+}
+
+.input-error{
+    color: red;
+    font-size: 12px;
+    position: absolute;
+  }
+@media (max-width:600px){
+    .password-rules li{
+        font-size: 10px;
+    }
+    .password-rules{
+        width: 105px;
+    }
+    .password-rules ul{
+        padding: 2px;
+    }
+    .register-container .right-container .registration-login-error h5{
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width:500px){
+    .register-container{
+        flex-direction: column;;
+    }
+    .register-container .left-container{
+        flex: 0.25;
+    }
+    .register-container .right-container .first-last-name-container{
+        flex-direction: column;
+    }
+    .left-sub-container h1{
+        font-size: 18px;
+    }
+    .left-sub-container h2{
+        font-size: 40px;
+        padding-top: 10px;
+    }
+    .right-container{
+        padding-top: 20px;
+    }
+    .password-rules li{
+        font-size: 9px;
+    }
+    .password-rules{
+        bottom: 35px;
+        transform: translateX(120px);
+        width: 180px;
+    }
+}
+@media (max-width:320px){
+    .password-rules{
+        width: 140px;
+        bottom: 25px;
+    }
+    .password-rules li{
+        font-size: 9px;
+    }
+}

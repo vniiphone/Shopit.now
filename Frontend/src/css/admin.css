@@ -1,0 +1,1066 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap");
+
+.role-admin-container {
+  display: flex;
+  height: 100%;
+}
+.admin-full-container {
+  position: relative;
+  height: 100%;
+}
+.admin-component-heading {
+  position: absolute;
+}
+
+.role-admin-container .role-admin-l-cont {
+  background-color: #343434;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  position: sticky;
+  left: 0;
+  top: 0;
+  height: 100vh;
+}
+.l-cont-large {
+  width: 150px;
+}
+.display-half {
+  width: 40px !important;
+}
+
+.role-admin-right {
+  height: 100%;
+  flex: 1;
+}
+.role-admin-nav {
+  width: 100%;
+  background-color: white;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+.role-admin-nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.role-admin-nav svg {
+  font-size: 20px;
+  cursor: pointer;
+}
+.role-admin-nav div:first-child {
+  position: relative;
+  margin-right: 20px;
+}
+.role-admin-l-cont .admin-logo-container {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  pointer-events: none;
+  height: 60px;
+}
+.role-admin-l-cont .admin-logo-container span:first-child {
+  font-family: "Gugi", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  padding-right: 5px;
+  transition: all 0.2s ease-in-out;
+}
+.role-admin-l-cont .admin-logo-container span:last-child {
+  transform: scale(0.8);
+  transition: all 0.2s 0.1s ease-in-out;
+}
+.now-logo {
+  margin-right: 65%;
+}
+.role-admin-nav div h3 {
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  background-color: rgb(255, 180, 66);
+  font-size: 11px;
+  width: 15px;
+  height: 15px;
+  padding-top: 2px;
+  font-weight: bold;
+  border-radius: 50%;
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+}
+.admin-full-container .admin-screen-error {
+  position: relative;
+  z-index: 999999;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  background-color: red;
+  color: white;
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
+}
+.admin-screen-error-visible {
+  height: 25px !important;
+}
+
+.admin-container .admin-user-container {
+  box-shadow: 0 0 8px rgb(184, 184, 184);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+}
+
+.admin-container .admin-user-container div span:first-child {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  padding-right: 10px;
+}
+.admin-container .admin-user-container div span:last-child {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", cursive;
+  color: orangered;
+}
+.admin-container .admin-user-container div h4 {
+  text-align: center;
+  font-size: 18px;
+  text-transform: lowercase;
+  font-family: "Oswald", sans-serif;
+}
+.admin-container .admin-controls {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.admin-container .admin-control-div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 200px;
+  margin: 10px;
+  box-shadow: 0 0 4px rgb(209, 209, 209);
+  padding: 25px 10px;
+  border-radius: 5px;
+  pointer-events: none;
+  position: relative;
+  background: white;
+}
+.admin-container .admin-control-div:last-child {
+  width: 300px;
+  max-width: 300px !important;
+}
+.admin-container .admin-control-div div {
+  display: flex;
+  align-items: baseline;
+}
+.admin-container .admin-control-div div svg {
+  font-size: 16px;
+  color: #a5a5a5;
+}
+.admin-container .admin-control-div div h2 {
+  font-size: 14px;
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  padding-left: 5px;
+  color: #a5a5a5;
+}
+.admin-container .admin-control-div h1 {
+  font-size: 26px;
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: bolder;
+  color: #343434;
+}
+.admin-container .admin-control-div .no-of1 {
+  color: rgb(255, 168, 87) !important;
+}
+.admin-container .admin-control-div .no-of2 {
+  color: rgb(107, 166, 255) !important;
+}
+.admin-container .admin-control-div .no-of3 {
+  color: rgb(91, 204, 91) !important;
+}
+.admin-container .admin-control-div .no-of4 {
+  color: rgb(255, 90, 90) !important;
+}
+.admin-container .admin-control-div .no-of4 span {
+  font-size: 10px;
+}
+.admin-edit-container .edit-icon {
+  font-size: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.role-admin-container .role-admin-l-cont .dashboard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.role-admin-container .role-admin-l-cont .dashboard .nav-btn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.role-admin-container
+  .role-admin-l-cont
+  .dashboard
+  .nav-btn
+  .dashboard-each-option {
+  width: 100%;
+}
+.role-admin-container
+  .role-admin-l-cont
+  .dashboard
+  .nav-btn
+  .dashboard-each-option
+  div {
+  display: flex;
+  font-family: "Oswald", sans-serif;
+  align-items: center;
+  height: 40px;
+  width: 100;
+  justify-content: flex-start;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.dashboard-each-option {
+  text-decoration: none !important;
+  display: block;
+}
+.scale-svg {
+  font-size: 20px !important;
+}
+.dashboard-each-option:hover {
+  background-color: rgba(225, 225, 225, 0.419);
+}
+.selected-screen {
+  background-color: rgba(225, 225, 225, 0.419) !important;
+}
+.role-admin-container
+  .role-admin-l-cont
+  .dashboard
+  .nav-btn
+  .dashboard-each-option
+  svg {
+  margin-right: 3px;
+  font-size: 16px;
+  transition: all 0.2s 0.2s ease-in-out;
+}
+.role-admin-container
+  .role-admin-l-cont
+  .dashboard
+  .nav-btn
+  .dashboard-each-option
+  h5 {
+  margin: 0;
+  font-size: 14px;
+  padding-left: 4px;
+  transition: all 0.2s 0.2s ease-in-out;
+}
+.dashboard-admin-options .dashboard-each-option div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  height: 40px;
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.dashboard-admin-options .dashboard-each-option div,
+.role-admin-container
+  .role-admin-l-cont
+  .dashboard
+  .nav-btn
+  .dashboard-each-option
+  div {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dashboard-admin-options .dashboard-each-option h5 {
+  margin: 0;
+  font-size: 14px;
+  padding-left: 4px;
+  transition: all 0.2s 0.2s ease-in-out;
+}
+.hide-it {
+  opacity: 0;
+  pointer-events: none;
+  font-size: 6px !important;
+}
+.dashboard-admin-options .dashboard-each-option svg {
+  margin-right: 3px;
+  font-size: 16px;
+  transition: all 0.2s 0.2s ease-in-out;
+}
+.dashboardToggle-left,
+.dashboardToggle-right {
+  cursor: pointer;
+  pointer-events: all;
+  transition: all 0.3s ease-in-out;
+}
+.dashboardToggle-left:hover {
+  transform: translateX(-4px);
+}
+.dashboardToggle-right:hover {
+  transform: translateX(4px);
+}
+
+.notification-container .notifications-display {
+  position: absolute;
+  width: 180px;
+  height: 160px;
+  top: 38px;
+  right: 0px;
+  background-color: #343434;
+  border-radius: 5px;
+  box-shadow: 0 0 4px rgb(186, 186, 186);
+  z-index: 99999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.15s ease-in;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.notification-container .no-notification {
+  color: #cecece;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-size: 14px;
+  margin-left: 15px;
+  pointer-events: none;
+}
+.notification-container .notification-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.notification-container .notification-error svg {
+  color: #cecece;
+  font-size: 35px;
+  margin: 20px 0 10px 15px;
+}
+.notification-container .notification-error h4 {
+  color: #cecece;
+  font-size: 14px;
+  text-align: center;
+  margin-left: 15px;
+}
+.notification-container .notifications-display::-webkit-scrollbar {
+  width: 6px;
+}
+
+.notification-container .notifications-display::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #343434;
+}
+
+.notification-container .notifications-display::-webkit-scrollbar-thumb {
+  background: #cccccc96;
+}
+
+.notification-container .notifications-display::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.notifications-display-visible {
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+
+.notification-container .notifications-display .notification-display-sub {
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  background-color: #343434;
+  cursor: pointer;
+  height: 55px !important;
+  padding: 5px;
+  border-bottom: 1px solid #cccccc96;
+  color: white;
+}
+.notification-container .notifications-display .notification-display-sub:hover {
+  background-color: rgba(213, 213, 213, 0.255);
+}
+.notification-container .notifications-display div .notification-user-details {
+  color: white;
+}
+.notification-container .notifications-display div h2 {
+  font-size: 12px !important;
+  margin: 0;
+  padding-bottom: 4px;
+  color: rgb(238, 155, 0);
+}
+.notification-container .notifications-display div h5 {
+  margin: 0;
+  overflow: hidden;
+  color: #cecece;
+  font-size: 10px !important;
+  width: 100%;
+  white-space: nowrap;
+  padding-bottom: 2px;
+}
+.notification-container .notifications-display div h5 span {
+  color: white;
+  text-transform: capitalize;
+}
+.admin-full-container .admin-logout-container {
+  cursor: pointer;
+  margin-left: 25px;
+}
+.admin-full-container .admin-logout-container-icon {
+  font-size: 35px;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+.admin-full-container
+  .admin-logout-container:hover
+  .admin-logout-container-icon {
+  color: red;
+  transform: scale(0.95);
+}
+.admin-full-container .all-users-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.admin-full-container .all-users-container .all-users-container-cover {
+  background-color: rgba(48, 48, 48, 0.767);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+.display-all-users {
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+.admin-full-container .all-users-container .all-users-sub-container {
+  width: 95%;
+  box-sizing: border-box;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 8px rgb(48, 48, 48);
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  padding-bottom: 10px;
+}
+
+.admin-full-container .all-users-container .all-users-sub-container .close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.admin-full-container .all-users-container .all-users-sub-container h2 {
+  font-size: 32px;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 500;
+  padding: 10px;
+  letter-spacing: 3px;
+  text-align: center;
+  pointer-events: none;
+}
+.admin-full-container
+  .all-users-container
+  .all-users-sub-container
+  .all-users-details {
+  overflow-y: scroll;
+  height: 350px;
+}
+
+.admin-full-container
+  .all-users-container
+  .all-users-sub-container
+  .all-users-details::-webkit-scrollbar {
+  width: 10px;
+}
+
+.admin-full-container
+  .all-users-container
+  .all-users-sub-container
+  .all-users-details::-webkit-scrollbar-track {
+  background-color: rgba(189, 189, 189, 0.164);
+}
+
+.admin-full-container
+  .all-users-container
+  .all-users-sub-container
+  .all-users-details::-webkit-scrollbar-thumb {
+  background: rgb(173, 173, 173);
+  border-radius: 10px;
+}
+.admin-full-container
+  .all-users-container
+  .all-users-sub-container
+  .all-users-details::-webkit-scrollbar-thumb:hover {
+  background: rgb(141, 141, 141);
+}
+.admin-full-container
+  .all-users-container
+  .all-users-sub-container
+  .all-users-details
+  .all-users-details-sub {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(189, 189, 189, 0.164);
+  display: flex;
+  align-items: center;
+  padding: 10px !important;
+  pointer-events: none;
+}
+.admin-full-container
+  .all-users-container
+  .all-users-sub-container
+  .all-users-details
+  .all-users-details-sub
+  h4 {
+  font-size: 18px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.admin-full-container
+  .all-users-container
+  .all-users-sub-container
+  .all-users-details
+  .all-users-details-sub
+  h5 {
+  font-size: 12px;
+  font-family: "Oswald", sans-serif;
+  overflow: hidden;
+}
+.admin-full-container
+  .all-users-container
+  .all-users-sub-container
+  .all-users-details
+  .all-users-details-sub
+  .user-details-1 {
+  width: 50px;
+  height: 50px;
+  background-color: rgb(114, 182, 221);
+  border-radius: 50%;
+  margin: 5px;
+  margin-right: 10px !important;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.admin-full-container
+  .all-users-container
+  .all-users-sub-container
+  .all-users-details
+  .all-users-details-sub
+  .user-details-1
+  img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.admin-full-container
+  .all-users-container
+  .all-users-sub-container
+  .all-users-details
+  .all-users-details-sub
+  .user-details-1
+  span {
+  font-size: 40px;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 600;
+  color: rgb(48, 48, 48);
+}
+.admin-full-container .admin-controls .loading-icon-admin {
+  background: none !important;
+  pointer-events: none;
+  position: absolute;
+  height: 100px;
+  transform: translateY(-30px);
+  box-shadow: none !important;
+}
+.admin-full-container .all-users-container .loading-icon-admin {
+  width: 100%;
+  height: 150px;
+}
+.admin-full-container .admin-settings-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.admin-full-container
+  .admin-settings-container
+  .admin-settings-container-cover {
+  background-color: rgba(48, 48, 48, 0.767);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+.admin-full-container .admin-settings-container .admin-settings-sub-container {
+  width: 95%;
+  box-sizing: border-box;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 8px rgb(48, 48, 48);
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  padding-bottom: 10px;
+  height: 300px;
+  overflow: hidden;
+}
+.admin-full-container
+  .admin-settings-container
+  .admin-settings-sub-container
+  .close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.display-admin-settings {
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+.admin-full-container .admin-settings-container h2 {
+  font-size: 32px;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 500;
+  padding: 10px;
+  letter-spacing: 3px;
+  text-align: center;
+  pointer-events: none;
+}
+.admin-full-container .admin-settings-container .admin-settings ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.admin-full-container .admin-settings-container .admin-settings li {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  border-radius: 50%;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 25px;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 500;
+  background-color: rgb(48, 48, 48);
+  color: white;
+  border: 2px solid rgb(48, 48, 48);
+  transition: all 0.2s ease-in-out;
+}
+.admin-full-container .admin-settings-container .admin-settings li:first-child {
+  background-color: rgb(238, 155, 0);
+  color: white;
+  border: 2px solid rgb(238, 155, 0);
+}
+.admin-full-container .admin-settings-container .admin-settings li:last-child {
+  background-color: rgb(238, 0, 0);
+  color: white;
+  border: 2px solid rgb(238, 0, 0);
+}
+.admin-full-container
+  .admin-settings-container
+  .admin-settings
+  li:last-child:hover {
+  background-color: white;
+  color: rgb(238, 0, 0);
+}
+.admin-full-container
+  .admin-settings-container
+  .admin-settings
+  li:first-child:hover {
+  background-color: white;
+  color: rgb(238, 155, 0);
+}
+.admin-full-container .admin-settings-container .mainpulate-account {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  bottom: -100%;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+  display: none;
+}
+.admin-full-container .admin-settings-container .mainpulate-account h4 {
+  color: red;
+  font-family: "Bebas Neue", cursive;
+  font-size: 10px;
+}
+.mainpulate-account-visible {
+  bottom: 0 !important;
+  display: block !important;
+  pointer-events: all !important;
+}
+.admin-full-container .admin-settings-container .mainpulate-account .back-btn {
+  font-size: 25px;
+  cursor: pointer;
+  transform: translate(5px, 5px);
+}
+.admin-full-container .admin-settings-container .mainpulate-account h5 {
+  text-align: center;
+}
+.admin-full-container .admin-settings-container .mainpulate-account button {
+  outline: none;
+  border: none;
+  background-color: rgb(255, 196, 0);
+  margin-top: 30px;
+  border-radius: 5px;
+  font-family: "Bebas Neue", cursive;
+  position: relative;
+  width: 70px;
+  height: 30px;
+}
+.admin-full-container
+  .admin-settings-container
+  .mainpulate-account
+  button
+  span {
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+}
+
+.loading-started-button {
+  font-size: 14px !important;
+  margin-left: 15px;
+}
+.button-disable {
+  pointer-events: none !important;
+}
+.admin-full-container
+  .admin-settings-container
+  .mainpulate-account
+  button:hover {
+  box-shadow: 0 0 5px rgb(141, 141, 141);
+}
+.admin-settings-container .admin-setting-input-container {
+  position: relative;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 30px;
+  margin-top: 30px;
+}
+.admin-settings-container .admin-setting-input-container label {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
+  font-family: "Bebas Neue", cursive;
+}
+.admin-settings-container .admin-setting-input-container input {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid rgb(131, 131, 131) !important;
+  outline: none;
+  background: none;
+  border: none;
+  font-family: "Bebas Neue", cursive;
+}
+
+.admin-settings-container .admin-setting-input-container input:focus ~ label,
+.admin-settings-container
+  .admin-setting-input-container
+  input:not(:placeholder-shown)
+  ~ label {
+  transform: translateY(-20px);
+}
+.admin-settings-container .admin-setting-input-container h5 {
+  color: red;
+  font-family: "Bebas Neue", cursive;
+  font-size: 10px;
+  position: absolute;
+}
+.admin-full-container
+  .admin-settings-container
+  .mainpulate-account
+  .loading-bar {
+  position: absolute;
+  width: 100px;
+  top: -34px;
+  left: -35px;
+}
+.small-screen-dashboard {
+  display: none;
+}
+.small-l {
+  width: 0;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 999999999;
+  transition: all 0.4s ease-in-out;
+}
+.l-cont-cover {
+  z-index: 99999999 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgba(213, 213, 213, 0.816);
+  transition: all 0.2s ease-in-out;
+}
+.l-cont-cover svg {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 32px;
+  cursor: pointer;
+}
+.admin-controls-container {
+  width: 100%;
+  height: 100vh;
+  background: rgb(245, 245, 245);
+  display: flex;
+}
+.admin-user-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.data-empty-animation-container h2,
+.network-error-animation-container h2 {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  color: #a5a5a5;
+  font-size: 16px;
+  pointer-events: none;
+}
+.data-empty-animation,
+.network-error-animation {
+  width: 200px;
+  height: 150px;
+  margin: auto;
+}
+.data-animation-loading-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.487);
+}
+.animation-loading-logo {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+}
+.admin-operation-user-loading {
+  position: absolute;
+  width: 35px;
+  top: 18px;
+  right: 10px;
+}
+.admin-control-div .faExclamation {
+  color: red !important;
+  font-size: 20px !important;
+}
+.admin-logout-now-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999999999999999;
+  background-color: rgba(255, 255, 255, 0.59);
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.display-logout-container {
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+.admin-logout-now-container .logout-btns {
+  width: 300px;
+  max-width: 300px;
+  margin: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: "Oswald", sans-serif;
+  transform: translate(-50%, -50%);
+  background-color: #343434;
+  padding: 20px;
+}
+.admin-logout-now-container .logout-btns h5 {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.admin-logout-now-container .logout-btns div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 18px;
+}
+.admin-logout-now-container .logout-btns button {
+  padding: 5px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 16px;
+}
+.admin-logout-now-container .logout-btns button:first-child {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.admin-logout-now-container .logout-btns button:last-child {
+  background-color: white;
+  color: #343434;
+  border: 1px solid #343434;
+  border-radius: 5px;
+}
+@media (max-width: 780px) {
+  .admin-logout-now-container .logout-btns h5 {
+    font-size: 15px;
+  }
+  .admin-logout-now-container .logout-btns button {
+    font-size: 14px;
+  }
+  .admin-container .admin-control-div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 200px;
+    margin: 10px;
+    box-shadow: 0 0 4px rgb(209, 209, 209);
+    padding: 25px 10px;
+    border-radius: 5px;
+    pointer-events: none;
+    background: white;
+  }
+  .admin-container .admin-control-div:last-child {
+    width: 250px;
+  }
+  .admin-container .admin-control-div div svg {
+    font-size: 14px;
+  }
+  .admin-container .admin-control-div div h2 {
+    font-size: 12px;
+  }
+  .admin-container .admin-control-div h1 {
+    font-size: 18px;
+  }
+  .notification-container
+    .notifications-display
+    div
+    .notification-user-details {
+    margin: -10px;
+    flex: 0.85;
+  }
+  .notification-container .notifications-display {
+    width: 210px;
+    height: 180px;
+  }
+  .notification-container .notifications-display .notification-display-sub {
+    height: 32px;
+  }
+  .notification-container .notifications-display .notification-user-img {
+    width: 24px;
+    height: 24px;
+    flex: 0.15;
+  }
+
+  .notification-container .notifications-display div h2 {
+    font-size: 10px;
+  }
+  .notification-container .notifications-display div h5 {
+    font-size: 8px;
+  }
+
+  .l-cont-cover-disp {
+    opacity: 1 !important;
+    pointer-events: all !important;
+  }
+  .small-l {
+    display: block !important;
+  }
+  .role-admin-container .role-admin-l-cont {
+    display: none;
+  }
+  .display-dashboard {
+    width: 40% !important;
+  }
+  .dashboardToggle-left,
+  .dashboardToggle-right {
+    display: none;
+  }
+  .role-admin-nav-right {
+    float: right !important;
+  }
+  .small-screen-dashboard {
+    display: block !important;
+  }
+}

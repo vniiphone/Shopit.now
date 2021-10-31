@@ -1,0 +1,87 @@
+.footer-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+  background-color: #343434;
+}
+.footer-container .footer-navi-link {
+  display: block;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  margin-top: 5px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+.footer-container .left-navi,
+.footer-container .mid-navi {
+  width: 160px;
+  text-align: left;
+  padding: 20px;
+}
+.footer-container .footer-logo {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  justify-content: center;
+  padding: 20px;
+  text-decoration: none;
+}
+.footer-container .footer-logo .logo-now {
+  width: 40px;
+  height: 40px;
+  margin-top: -14px;
+}
+.footer-container .footer-logo h2 {
+  font-family: "Gugi", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  color: white;
+  padding-right: 5px;
+}
+.footer-container .right-navi {
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  padding-left: 20px;
+  pointer-events: none;
+}
+.footer-container .right-navi div:first-child {
+  margin-bottom: 20px;
+}
+.footer-container .right-navi .fontawsm-logo {
+  display: flex;
+  align-items: center;
+}
+.footer-container .right-navi .fontawsm {
+  margin-bottom: 8px;
+}
+.footer-container .right-navi h4 {
+  padding-left: 5px;
+  font-size: 24px;
+}
+.footer-container .right-navi h5 {
+  font-size: 15px;
+}
+@media (max-width: 500px) {
+  .footer-container .footer-navi-link {
+    font-size: 12px;
+  }
+  .footer-container .left-navi,
+  .footer-container .mid-navi {
+    width: 120px;
+  }
+  .footer-container .right-navi h4 {
+    font-size: 18px;
+  }
+  .footer-container .right-navi h5 {
+    font-size: 12px;
+  }
+}

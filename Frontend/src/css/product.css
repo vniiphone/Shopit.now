@@ -1,0 +1,828 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.product-main-container {
+  padding: 10px;
+  position: relative;
+}
+.product-main-container .product-loader {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 200px;
+  height: 150px;
+  width: 150px;
+  pointer-events: none;
+}
+.product-main-container .product-image-container {
+  display: flex;
+  align-items: center;
+  flex: 0.6;
+}
+.product-main-container .product-image-container .all-images {
+  display: flex;
+  flex-direction: column;
+}
+.product-main-container .product-image-container .image-container {
+  width: 100px;
+  height: 100px;
+  margin: 1px;
+  border: 4px solid rgb(255, 255, 255);
+  background-color: rgb(226, 226, 226);
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.product-main-container .product-image-container .image-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.product-main-container .product-container {
+  display: flex;
+  padding: 20px 0px;
+  flex-wrap: wrap;
+}
+.product-main-container .full-image {
+  width: 100%;
+  max-width: 650px;
+  height: 550px;
+  overflow: hidden;
+  margin: 0 20px;
+  border-radius: 5px;
+  border: 1px solid rgb(226, 226, 226);
+  background-color: rgb(226, 226, 226);
+}
+.product-main-container .full-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.item-btn-container div {
+  width: 180px;
+  padding: 6px 10px;
+  display: flex;
+  background: rgb(255, 196, 0);
+  margin: 15px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+}
+.wishlist-btn{
+  width: 180px;
+  padding: 10px 0;
+  display: flex;
+  margin: 0 15px;
+  align-items: center;
+  border-radius: 20px;
+  position: relative;
+  height: 42px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid #343434;
+  color: #343434;
+}
+.wishlist-btn .wishlist-btn-loading{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+.wishlist-btn h4{
+  position: absolute;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 12px;
+  color: white;
+  background-color: #343434;
+  width: 150px;
+  padding: 6px;
+  border-radius: 5px;
+  bottom: -50px;
+  display: none;
+  left: 50%;
+  transform: translate(-50%,10%);
+}
+.wishlist-btn:hover h4{
+  display: block !important;
+}
+.wishlist-error{
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  background-color: red;
+  color: white;
+  width: 200px;
+  height: 60px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  cursor: default;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+.wishlist-error h5{
+  font-size: 15px;
+  text-align: center;
+  margin: 0;
+}
+.wishlist-error button:first-child{
+  position: absolute;
+  right: 5px;
+  top: 0px;
+  outline: none;
+  border: none;
+  background: none;
+  color: white;
+  font-weight: 600;
+}
+.wishlist-error button:last-child{
+  background: white;
+  color: #343434;
+  outline: none;
+  border: 1px solid #343434;
+  font-size: 12px;
+  padding: 2px 4px;
+  width: 60px;
+}
+.wishlist-btn .wishlist-btn-loading-c{
+  position: absolute;
+  background-color: rgba(241, 241, 241, 0.63);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.wishlist-btn:hover{
+  box-shadow: 0 0 8px rgb(196, 196, 196);
+}
+.wishlist-btn svg{
+  font-size: 28px;
+  margin-left: 6px;
+}
+.wishlist-btn span{
+  flex: 1;
+  text-align: center;
+}
+.product-details-container {
+  flex: 0.4;
+}
+.product-details-container h2 {
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  font-size: 30px;
+}
+.product-details-container h3 {
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+}
+.item-btn-container div button {
+  background: none;
+  border: none;
+  outline: none;
+  text-align: center;
+  flex: 1;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: rgb(27, 27, 27);
+}
+.item-btn-container div:last-child {
+  background-color: rgb(27, 27, 27);
+}
+.item-btn-container div:last-child button {
+  color: white !important;
+}
+.item-btn-container .btn-icons {
+  transform: scale(1.4);
+  color: rgb(27, 27, 27);
+}
+.item-btn-container .btn-icons-buy {
+  transform: scale(1.4);
+  color: rgb(27, 27, 27);
+}
+.item-btn-container div:hover {
+  box-shadow: 0 0 8px rgb(66, 66, 66);
+}
+.product-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+}
+.selected-image {
+  border: 4px solid rgb(0, 162, 255) !important;
+}
+.product-details-header .details-container h2 {
+  font-size: 22px;
+  font-family: "Poppins", sans-serif;
+}
+.product-details-header .details-container h3 {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+.product-details-header {
+  display: none;
+}
+.small-screen-btns {
+  display: none;
+  width: 200px;
+  margin: auto;
+}
+.product-description-container {
+  padding: 30px;
+}
+.product-description-container h5 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 600;
+  line-height: 50px;
+}
+.product-description-container p {
+  font-size: 16px;
+  font-family: "Roboto Condensed", sans-serif;
+  text-align: justify;
+}
+.product-related h2 {
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 40px 20px 10px 20px;
+  font-size: 25px;
+  font-weight: 600;
+}
+.reviews-container {
+  padding: 0px 30px;
+}
+.reviews-container h2 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+.reviews-container h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+}
+.reviews-container span {
+  font-size: 15px;
+}
+.reviews-container .reviews-sub-container .reviews-sub-container-rating {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.reviews-sub-container-rating h5 {
+  font-size: 16px;
+}
+.reviews-container .reviews-sub-container .reviews-sub-container-review {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  border: 1px solid rgb(214, 214, 214);
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.reviews-container
+  .reviews-sub-container
+  .reviews-sub-container-review
+  .reviews-sub-container-review-cover {
+  position: absolute;
+  background-color: rgba(143, 143, 143, 0.582);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.reviews-container
+  .reviews-sub-container
+  .reviews-sub-container-review
+  .reviews-sub-container-review-cover
+  h2 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 18px;
+  color: rgb(27, 27, 27);
+}
+.reviews-sub-container-review-cover-blur {
+  filter: blur(4px);
+}
+.reviews-sub-container-review-cover .reviews-sub-container-lock {
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: rgb(27, 27, 27);
+}
+.reviews-sub-container-review h4 {
+  font-family: "Roboto Condensed", sans-serif;
+}
+.reviews-container .reviews-sub-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.reviews-sub-container-review h5 {
+  text-align: right;
+}
+.reviews-sub-container-review button {
+  background: rgb(255, 196, 0);
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+  font-family: "Roboto Condensed", sans-serif;
+  border-radius: 5px;
+  width: 65px;
+  float: right;
+}
+.reviews-sub-container textarea {
+  width: 100%;
+  outline: none;
+  resize: none;
+  border: none;
+  margin-top: 10px;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.reviews-sub-container-review .review-btn-container {
+  position: relative;
+  margin-left: auto;
+  background-color: red;
+}
+.reviews-sub-container-review .review-btn-container button {
+  position: relative;
+}
+.reviews-sub-container-review .review-btn-container span {
+  position: absolute;
+  font-family: "Roboto Condensed", sans-serif;
+  width: 170px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgb(134, 134, 134);
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  font-size: 12px;
+  right: 0;
+  top: -30px;
+  opacity: 0;
+  pointer-events: none;
+}
+.display-submit-error {
+  opacity: 1 !important;
+}
+.all-user-reviews .review-avatar {
+  background: rgb(219, 139, 93);
+  color: black;
+  padding: 0px;
+  width: 25px;
+  text-align: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: inline-block;
+  font-family: "Roboto Condensed", sans-serif;
+  border-radius: 50%;
+}
+.all-user-reviews {
+  width: 70%;
+  margin-left: auto;
+  position: relative;
+}
+.all-user-reviews .all-user-reviews-sub-container .each-review-sub-container {
+  display: flex;
+  align-items: center;
+}
+.all-user-reviews .all-user-reviews-sub-container {
+  margin-bottom: 20px;
+}
+
+.all-user-reviews-sub-container .each-review-sub-container .each-star {
+  height: 32px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  margin-left: 10px;
+  width: 100%;
+}
+.all-user-reviews-sub-container .each-review-sub-container .each-star span {
+  position: absolute;
+  top: -4px;
+  left: 2px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+.all-user-reviews-sub-container h5 {
+  width: 96%;
+  margin-left: auto;
+  font-size: 12px;
+}
+.star-rating-container {
+  position: relative;
+}
+.star-rating-error {
+  position: absolute;
+  font-family: "Roboto Condensed", sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgb(134, 134, 134);
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  font-size: 12px;
+  left: 160px;
+  top: -15px;
+  pointer-events: none;
+  opacity: 0;
+}
+.star-rating-error-display {
+  opacity: 1 !important;
+}
+.all-user-reviews .review-load-more {
+  position: absolute;
+  left: 40%;
+  cursor: pointer;
+}
+.remove-review-load-more {
+  display: none;
+}
+.all-user-reviews .review-load-more .review-load-icon {
+  transform: scaleY(2.2) scaleX(2.8);
+  transition: transform 0.3s ease-in-out;
+  color: rgb(66, 66, 66);
+}
+.all-user-reviews .review-load-more:hover .review-load-icon {
+  transform: translateY(-5px) scale(2.2);
+}
+.review-btn-container h5 {
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgb(134, 134, 134);
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  font-size: 12px;
+  right: 0;
+  top: -42px;
+  opacity: 0;
+  width: 180px;
+  text-align: center;
+  pointer-events: none;
+}
+.display-already-submitted-review {
+  opacity: 1 !important;
+}
+.loading-on-review-submit {
+  position: absolute;
+  pointer-events: none;
+  left: -40px;
+  top: -14px;
+  transform: scale(0.6);
+}
+.review-btn-container h3 {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+.review-btn-container-loading-preview {
+  font-size: 10px !important;
+  text-align: right;
+}
+.review-btn-container h4 {
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgb(134, 134, 134);
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  font-size: 12px;
+  right: 0;
+  top: -42px;
+  width: 180px;
+  text-align: center;
+  pointer-events: none;
+}
+.disable-order {
+  pointer-events: none !important;
+}
+.item-btn-container div .item-btn-loading {
+  position: absolute;
+  transform: scale(0.5);
+  right: -85px;
+  background: none !important;
+}
+.item-btn-container div span {
+  position: absolute;
+  padding: 4px;
+  margin: 0;
+  font-size: 11px;
+  font-family: "Roboto Condensed", sans-serif;
+  width: 100px;
+  top: -44px;
+  right: -70px;
+  box-shadow: 0 0 5px rgb(182, 182, 182);
+  border-radius: 10px;
+  background-color: red;
+  color: white;
+}
+.item-btn-container div h5 {
+  position: absolute;
+  font-size: 11px;
+  font-family: "Roboto Condensed", sans-serif;
+  top: -40px; 
+  border-radius: 2px;
+  width: 120px;
+  background-color: red;
+  color: white;
+  box-shadow: 0 0 5px rgb(173, 173, 173);
+  padding: 3px;
+}
+.item-btn-container div h5::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: red transparent transparent transparent;
+}
+.item-btn-container h4 {
+  color: red;
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0;
+  margin-bottom: 5px !important;
+}
+.out-of-stock-btn-disable {
+  pointer-events: none !important;
+  background-color: rgba(143, 143, 143, 0.582) !important;
+}
+@media (min-width: 1025px) and (max-width: 1340px) {
+  .product-main-container .full-image {
+    height: 400px;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-main-container .full-image {
+    height: 400px;
+  }
+  .product-details-container h2 {
+    font-size: 25px;
+  }
+  .product-details-container h3 {
+    font-size: 18px;
+  }
+  .item-btn-container div {
+    width: 140px;
+    padding: 4px 8px;
+    margin: 10px;
+  }
+  .wishlist-btn{
+    width: 140px;
+    font-size: 16px;
+    height: 35px;
+  }
+  .wishlist-btn svg{
+    font-size: 20px;
+  }
+  .item-btn-container div button {
+    font-size: 16px;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .product-main-container .product-image-container .all-images {
+    display: flex;
+    flex-direction: row;
+  }
+  .product-main-container .product-image-container {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    flex: 1;
+  }
+  .product-main-container .full-image {
+    height: 400px;
+  }
+  .product-details-container h2 {
+    font-size: 25px;
+  }
+  .product-details-container h3 {
+    font-size: 18px;
+  }
+  .item-btn-container div {
+    width: 140px;
+    padding: 4px 8px;
+    margin: 10px;
+  }
+  
+  .product-main-container .product-image-container .image-container {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .reviews-container .reviews-sub-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .product-main-container .product-image-container .all-images {
+    display: flex;
+    flex-direction: row;
+  }
+  .product-main-container .product-image-container {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    flex: 1;
+  }
+  .product-main-container .full-image {
+    height: 400px;
+  }
+  .product-details-container h2 {
+    font-size: 25px;
+  }
+  .product-details-container h3 {
+    font-size: 18px;
+  }
+  .product-main-container .product-image-container .image-container {
+    width: 60px;
+    height: 60px;
+  }
+  .product-details-header {
+    display: block !important;
+  }
+  .product-details-container {
+    display: none !important;
+  }
+  .small-screen-btns {
+    display: block !important;
+  }
+  .reviews-container .reviews-sub-container .reviews-sub-container-rating {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .reviews-container .reviews-sub-container .reviews-sub-container-review {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .all-user-reviews {
+    width: 100%;
+  }
+  .all-user-reviews-sub-container h5 {
+    width: 90%;
+  }
+}
+
+@media (min-width: 325px) and (max-width: 480px) {
+  .reviews-container .reviews-sub-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .product-main-container .product-image-container .all-images {
+    display: flex;
+    flex-direction: row;
+  }
+  .product-main-container .product-image-container {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    flex: 1;
+  }
+  .product-main-container .full-image {
+    height: 300px;
+  }
+  .product-details-container h2 {
+    font-size: 25px;
+  }
+  .product-details-container h3 {
+    font-size: 18px;
+  }
+  .product-main-container .product-image-container .image-container {
+    width: 80px;
+    height: 80px;
+  }
+  .product-details-header {
+    display: block !important;
+  }
+  .product-details-container {
+    display: none !important;
+  }
+
+  .small-screen-btns {
+    display: block !important;
+  }
+  .reviews-container .reviews-sub-container .reviews-sub-container-rating {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .reviews-container .reviews-sub-container .reviews-sub-container-review {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .all-user-reviews {
+    width: 100%;
+  }
+  .all-user-reviews-sub-container h5 {
+    width: 90%;
+  }
+  .item-btn-container div span {
+    padding: 4px;
+    font-size: 9px;
+    width: 80px;
+    top: -40px;
+    right: -20px;
+  }
+ 
+}
+
+@media (max-width: 324px) {
+  .product-main-container .full-image {
+    height: 220px;
+    width: 220px;
+  }
+  .product-main-container .product-image-container .all-images {
+    display: flex;
+    flex-direction: row;
+  }
+  .product-main-container .product-image-container {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    flex: 1;
+  }
+  .product-details-container h2 {
+    font-size: 25px;
+  }
+  .product-details-container h3 {
+    font-size: 18px;
+  }
+  .product-main-container .product-image-container .image-container {
+    width: 50px;
+    height: 50px;
+  }
+  .product-details-header {
+    display: block !important;
+  }
+  .product-details-container {
+    display: none !important;
+  }
+
+  .small-screen-btns {
+    display: block !important;
+  }
+  .reviews-container .reviews-sub-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .reviews-container .reviews-sub-container .reviews-sub-container-rating {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .reviews-container .reviews-sub-container .reviews-sub-container-review {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .all-user-reviews {
+    width: 100%;
+  }
+  .all-user-reviews-sub-container h5 {
+    width: 90%;
+  }
+  .item-btn-container div span {
+    padding: 4px;
+    font-size: 9px;
+    width: 80px;
+    top: -40px;
+    right: -20px;
+  }
+}

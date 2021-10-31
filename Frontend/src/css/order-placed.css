@@ -1,0 +1,71 @@
+.order-placed-success-msg {
+  margin-top: 50px;
+}
+.order-placed-success-msg .order-placed-success-anim {
+  width: 100%;
+  height: 100px;
+}
+.order-placed-success-msg h5 {
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Roboto Condensed", sans-serif;
+  text-align: center;
+  padding: 10px 0;
+  color: rgb(58, 188, 94);
+  animation: msganim 1s 0.4s forwards;
+  opacity: 0;
+}
+@keyframes msganim {
+  to {
+    opacity: 1;
+  }
+}
+
+.order-placed-success-msg .order-placed-sub {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.order-placed-success-msg .order-placed-sub h4 {
+  font-family: "Roboto Condensed", sans-serif;
+  text-align: center;
+  font-size: 16px;
+}
+.order-placed-success-msg .order-placed-sub .forward-container {
+  width: 200px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: white;
+  border: 1px solid rgb(218, 218, 218);
+  animation: forwardAnim 1s 0.9s forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+@keyframes forwardAnim {
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.order-placed-success-msg .order-placed-sub .forward-container .forward-anim {
+  height: 150px;
+}
+.order-placed-success-msg .order-placed-sub .forward-container:hover {
+  box-shadow: 0 0 8px rgb(182, 182, 182);
+}
+
+@media (max-width: 601px) {
+  .order-placed-success-msg .order-placed-sub .forward-container {
+    width: 100px;
+  }
+  .order-placed-success-msg .order-placed-sub h4 {
+    font-size: 10px;
+  }
+  .order-placed-success-msg .order-placed-sub .forward-container .forward-anim {
+    height: 80px;
+  }
+}

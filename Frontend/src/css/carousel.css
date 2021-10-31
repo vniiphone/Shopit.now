@@ -1,0 +1,68 @@
+.carousel-container{
+  width: 100%;
+  background-color: rgb(231, 231, 231);
+  overflow: hidden;
+  position: relative;
+  height: 360px;
+}
+.carousel-container .ad-error{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.carousel-container .carousel {
+  width: 100%;
+  height: 360px;
+}
+.carousel-container .slick-dots {
+  position: absolute;
+  bottom: 20px;
+  z-index: 99999;
+}
+.carousel-container .slick-dots li {
+  margin: 0 16px;
+}
+
+.carousel-container .slick-dots li button:before {
+  content: " ";
+  background: #d8d8d8b7;
+  opacity: 1;
+  height: 4px;
+  width: 30px;
+  border-radius: 10px;
+}
+.carousel-container .slick-dots li.slick-active button:before {
+  content: " ";
+  background: #303030b6;
+  opacity: 1;
+  height: 4px;
+  width: 30px;
+  border-radius: 10px;
+}
+
+.carousel-container .carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+@media (max-width: 768px) {
+  .carousel-container .carousel img {
+    object-fit: cover;
+    height: 200px;
+  }
+  .carousel-container {
+    height: 200px;
+  }
+  .carousel-container .slick-dots li button:before {
+    width: 20px;
+  }
+  .carousel-container .slick-dots li {
+    margin: 0 8px;
+  }
+  .carousel-container .slick-dots li.slick-active button:before {
+    width: 25px;
+  }
+}

@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Gugi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap");
+.navbar-container {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 6px 6px rgba(232, 232, 232, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 9999999;
+  background-color: white;
+  justify-content: center;
+}
+.navbar-container h1 {
+  font-family: "Gugi", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px; 
+  margin-top: 5px;
+  padding-right: 3px;
+  color: #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.logo-container {
+  display: flex;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+.navbar-container .account-space {
+  display: flex;
+  justify-content: space-between;
+  width: 97%;
+  height: 80px;
+  align-items: center;
+}
+.navbar-container .account-space .searchbar {
+  width: 600px;
+  height: 35px;
+  border-radius: 20px;
+  display: flex;
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+.navbar-container .account-space .searchbar input {
+  border-radius: 20px 0px 0px 20px;
+  padding: 2px 10px 0px 10px;
+  font-size: 16px;
+  height: 100%;
+  border: 0px;
+  outline: none;
+  flex: 1;
+  background: none;
+  font-family: "Reem Kufi", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+.navbar-container .account-space .searchbar .search-icon {
+  background: #e8e8e8;
+  border-radius: 0px 20px 20px 0px;
+  width: 50px;
+  cursor: pointer;
+}
+.navbar-container .account-space .user-details {
+  display: flex;
+  align-items: center;
+}
+.navbar-container .account-space .user-details .user-links {
+  text-decoration: none;
+  color: black;
+  font-family: "Reem Kufi", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  margin-right: 8px;
+  box-sizing: border-box;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.navbar-container .account-space .user-details .user-links:hover {
+  color: red;
+}
+.navbar-container .account-space .user-details .cart-icon {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+.navbar-container .account-space .user-details .cart-icon .warning-icon {
+  position: absolute;
+  top: -12px;
+  left: 12px;
+  color: rgb(255, 38, 0);
+  font-size: 16px;
+}
+.navbar-container .account-space .user-details .cart-icon span {
+  position: absolute;
+  top: -12px;
+  left: 15px;
+  background: #c4c4c4;
+  padding: 1px 5px;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 600;
+  color: black !important;
+}
+.navbar-container .categories-space {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  height: 40px;
+  align-items: center;
+}
+.navbar-container .categories-space .categories-link {
+  text-decoration: none;
+  color: black;
+  margin: 0 10px;
+  font-family: "Reem Kufi", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  width: 90px;
+}
+.navbar-container .categories-space .categories-link:hover {
+  color: red;
+}
+.navbar-container .account-space .menu-toggle {
+  display: none;
+}
+.menu-container {
+  z-index: 99999;
+  right: 0;
+  position: fixed;
+  width: 100%;
+  height: 0px;
+  background-color: rgba(232, 232, 232);
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  display: none;
+}
+.menuVisible {
+  z-index: 99999;
+  display: none;
+  overflow: hidden;
+  right: 0;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(232, 232, 232);
+  transition: all 0.5s ease-in-out;
+  height: 344px !important;
+}
+.menu-container .menu-items,
+.menuVisible .menu-items {
+  width: 100%;
+  text-align: center;
+  padding: 5px 0px;
+  font-size: 16px;
+  border-bottom: 1px solid #d6d5d5;
+  font-family: "Reem Kufi", sans-serif;
+}
+.menu-container .menu-items:hover,
+.menuVisible .menu-items:hover {
+  background-color: #d6d5d5;
+}
+.menuVisible .logout,
+.menu-container .logout {
+  text-align: center;
+  font-family: "Reem Kufi", sans-serif;
+  color: white;
+  width: 100%;
+  font-size: 18px;
+  padding: 4px 0;
+  background: red;
+}
+.menu-user-details {
+  color: white;
+  background: #343434;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-user-details span {
+  padding: 20px 4px;
+  font-family: "Reem Kufi", sans-serif;
+}
+.menu-user-details .cart-icon {
+  background-color: white;
+  position: relative;
+  margin-right: 8px;
+  padding: 15px 10px 5px 10px;
+  border-radius: 50%;
+}
+.menu-user-details .cart-icon span {
+  position: absolute;
+  top: -16px;
+  right: 10px;
+  color: red;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Reem Kufi", sans-serif;
+}
+.menu-user-details .cart-icon .warning-icon {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: red;
+  font-size: 14px;
+}
+.menu-categories-head {
+  font-family: "Reem Kufi", sans-serif;
+  text-transform: uppercase;
+  background-color: #d6d5d5;
+  padding: 5px;
+  text-align: center;
+  letter-spacing: 4px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.menu-user-links,
+.menu-logout-links {
+  width: 100%;
+  display: block;
+  text-decoration: none !important;
+  color: white !important;
+  text-transform: uppercase;
+}
+.menu-categories-links {
+  width: 100%;
+  display: block;
+  text-decoration: none !important;
+  color: black !important;
+}
+@media (max-width: 1116px) {
+  .navbar-container .account-space .searchbar {
+    width: 450px;
+  }
+}
+@media (max-width: 960px) {
+  .navbar-container .account-space .searchbar {
+    max-width: 400px;
+  }
+  .navbar-container h1 {
+    font-size: 26px;
+  }
+  .navbar-container .account-space .searchbar input {
+    font-size: 16px;
+  }
+  .navbar-container .account-space .user-details .user-links {
+    font-size: 14px;
+  }
+  .navbar-container .account-space .searchbar {
+    height: 35px;
+  }
+  .navbar-container .account-space .searchbar .search-icon {
+    width: 40px;
+  }
+  .navbar-container .account-space .user-details .cart-icon span {
+    font-size: 10px;
+    top: -12px;
+    left: 10px;
+  }
+  .navbar-container .categories-space .categories-link {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-container .categories-space .categories-link {
+    font-size: 12px;
+  }
+  .navbar-container h1 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 651px) {
+  .navbar-container .account-space .user-details {
+    display: none !important;
+  }
+  .navbar-container .account-space .menu-toggle,
+  .menu-container,
+  .menuVisible {
+    display: block !important;
+  }
+  .navbar-container .categories-space {
+    display: none;
+  }
+  .navbar-container {
+    height: 70px;
+  }
+  .navbar-container h1 {
+    font-size: 18px;
+  }
+  .navbar-container .account-space .searchbar {
+    height: 32px;
+  }
+  .navbar-container .account-space .searchbar input {
+    font-size: 14px;
+  }
+}
+@media (max-width: 329px) {
+  .navbar-container .account-space .searchbar {
+    width: 150px;
+  }
+  .navbar-container h1 {
+    font-size: 16px;
+  }
+  .navbar-container .account-space .searchbar {
+    height: 28px;
+  }
+  .navbar-container .account-space .searchbar input {
+    font-size: 10px;
+  }
+}

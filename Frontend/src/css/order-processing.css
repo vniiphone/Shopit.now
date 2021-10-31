@@ -1,0 +1,543 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+.order-process-nav {
+  width: 100%;
+  padding: 20px;
+}
+.order-process-nav-sub1 {
+  display: flex;
+  pointer-events: none;
+  text-decoration: none !important;
+  padding: 0 0 20px 0;
+}
+.order-process-nav-sub1 h1 {
+  font-family: "Gugi", cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  margin-top: 5px;
+  padding-right: 3px;
+  color: #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.order-process-nav-sub2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.order-process-nav-sub2 svg {
+  font-size: 26px;
+  position: relative;
+  z-index: 99;
+  color: rgb(218, 218, 218);
+  transition: color 0.2s ease-in;
+}
+.progress-color {
+  color: red !important;
+}
+.order-process-nav-sub2 .progress-bar {
+  width: 95%;
+  z-index: 9;
+  background-color: rgb(218, 218, 218);
+  position: absolute;
+  height: 2px;
+}
+.order-process-nav-sub2 .address-progress {
+  position: absolute;
+  height: 2px;
+  z-index: 999;
+  background-color: red;
+  width: 0;
+  transition: all 0.4s ease-in-out;
+}
+.progress-visible {
+  width: 52% !important;
+}
+.order-process-nav-sub2 .delivery-progress {
+  position: absolute;
+  height: 2px;
+  left: 50%;
+  width: 0%;
+  z-index: 999;
+  background-color: red;
+  transition: all 0.4s ease-in-out;
+}
+
+.order-delivery-container,
+.payment-mode-container {
+  width: 95%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  box-shadow: 0 0 5px rgb(196, 196, 196);
+  border-radius: 5px;
+}
+.order-delivery-container h2,
+.payment-mode-container h2,
+.order-sucess-container h2 {
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 24px;
+  pointer-events: none;
+  padding: 20px 0;
+}
+.order-process-container p {
+  text-align: center;
+}
+.order-process-container .continue-btn {
+  padding: 5px;
+  width: 100px;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: red;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+.order-process-container .continue-btn:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+}
+.order-delivery-container .order-delivery-sub-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgb(206, 206, 206);
+  border-radius: 5px;
+}
+
+.order-process-btn-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.order-process-btn-container button {
+  width: 80px;
+  padding: 3px;
+  font-family: "Roboto Condensed", sans-serif;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+  color: black;
+  background-color: gray;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+.order-process-btn-container button:first-child {
+  border: 1px solid black;
+  background-color: white;
+}
+.order-process-btn-container button:last-child {
+  background-color: red;
+  color: white !important;
+}
+.disable-continue-btn {
+  background-color: rgb(182, 182, 182) !important;
+  pointer-events: none !important;
+}
+.payment-mode {
+  padding: 10px;
+}
+.payment-mode input {
+  margin-right: 5px;
+  color: black;
+  padding: 2px;
+  cursor: pointer;
+}
+.payment-mode label {
+  font-family: "Roboto Condensed", sans-serif;
+}
+.payment-mode .card-payment {
+  padding: 10px;
+}
+.payment-mode .card-payment img {
+  width: 200px;
+  height: 30px;
+  padding: 0 15px;
+  margin-bottom: 5px;
+}
+.payment-mode .card-payment .payment-input h4 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 15px;
+  margin: 0;
+  margin-bottom: 2px !important;
+  padding: 0;
+}
+.payment-mode .card-payment .payment-input {
+  padding: 15px;
+}
+.payment-mode .card-payment .payment-input input {
+  margin-bottom: 25px;
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.payment-mode .card-payment .payment-card {
+  display: flex;
+  margin-bottom: 25px;
+}
+.payment-mode .card-payment .payment-card select {
+  width: 80px;
+  height: 30px;
+  outline: none;
+  margin-right: 10px;
+  border: 1px solid gray;
+  background-color: rgba(243, 243, 243, 0.707);
+  color: rgb(49, 49, 49);
+  font-family: "Roboto Condensed", sans-serif;
+  border-radius: 5px;
+}
+.payment-mode .card-payment .payment-input button {
+  border: none;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  padding: 4px;
+  border-radius: 5px;
+  background-color: rgb(255, 174, 0);
+}
+.payment-mode .card-payment .payment-input h5 {
+  font-size: 12px;
+  color: red;
+  font-family: "Roboto Condensed", sans-serif;
+  position: absolute;
+  bottom: 0;
+}
+.payment-mode .card-payment .payment-input form div {
+  position: relative;
+}
+.payment-mode .card-payment .payment-input .card-added-success-msg {
+  font-family: "Roboto Condensed", sans-serif;
+  color: green;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+.order-sucess-container {
+  width: 95%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  box-shadow: 0 0 5px rgb(196, 196, 196);
+  border-radius: 5px;
+  height: 100%;
+}
+.order-sucess-container h3 {
+  font-size: 18px;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0;
+  pointer-events: none;
+  padding: 0 15px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.order-sucess-item-details-container {
+  border-bottom: 1px solid rgb(150, 150, 150);
+  margin: 0 15px;
+}
+.order-sucess-container .order-success-item-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  align-items: center;
+}
+.order-sucess-container .order-success-item-details span:first-child {
+  font-size: 18px;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: capitalize;
+  flex: 0.6;
+}
+.order-sucess-container .order-success-item-details span {
+  font-family: "Roboto Condensed", sans-serif;
+  pointer-events: none;
+}
+.order-sucess-container .order-success-item-details span:nth-child(2) {
+  font-size: 14px;
+  color: rgb(150, 150, 150);
+}
+.order-sucess-container .order-success-item-details span:last-child {
+  font-size: 16px;
+}
+.order-sucess-container .amount-payable {
+  margin: 5px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.order-sucess-container .amount-payable span {
+  font-weight: bold;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.order-sucess-container .amount-payable span:first-child {
+  font-size: 18px;
+}
+.order-sucess-container .amount-payable span:last-child {
+  font-size: 24px;
+}
+.order-sucess-container .order-data-loading {
+  width: 100%;
+  height: 80px;
+}
+.order-delivery-container .address-data-loading {
+  width: 100%;
+  height: 80px;
+}
+.order-delivery-container .no-address {
+  padding: 5px 10px;
+  position: relative;
+}
+.order-delivery-container .no-address h5 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 18px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.order-delivery-container .no-address button {
+  border: none;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  padding: 4px;
+  border-radius: 5px;
+  background-color: rgb(255, 174, 0);
+}
+
+.order-delivery-container .no-address .address-container div {
+  position: relative;
+  margin-bottom: 25px;
+}
+.order-delivery-container .no-address .address-container div label {
+  position: absolute;
+  top: 6px;
+  font-family: "Roboto Condensed", sans-serif;
+  pointer-events: none;
+  font-size: 14px;
+  left: 6px;
+  transition: all 0.4s ease-in-out;
+  border-radius: 5px;
+  height: 10px;
+}
+
+.order-delivery-container
+  .no-address
+  .address-container
+  div
+  input:focus
+  ~ label,
+.order-delivery-container
+  .no-address
+  .address-container
+  div
+  input:not(:placeholder-shown)
+  ~ label {
+  transform: translateY(-14px);
+  font-size: 12px;
+  background-color: white;
+  color: rgb(75, 75, 75);
+}
+
+.order-delivery-container .no-address .address-container div input {
+  padding: 2px 4px;
+  border-radius: 5px;
+  width: 100%;
+  outline: none;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: white;
+  border: 1px solid gray;
+}
+.order-delivery-container .no-address .address-container div h4 {
+  position: absolute;
+  bottom: -22px;
+  font-size: 10px;
+  left: 5px;
+  color: red;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.order-delivery-container .no-address .no-address-cover {
+  position: absolute;
+  background-color: rgba(255, 252, 252, 0.508);
+  top: 0;
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.order-delivery-container .no-address .new-address-data-loading {
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.order-delivery-container {
+  position: relative;
+  overflow: hidden;
+}
+.order-delivery-container .server-error1,
+.order-delivery-container .server-error2 {
+  position: absolute;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: rgb(255, 100, 100);
+  color: white;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  top: -30px;
+  opacity: 0;
+  border-radius: 0 0 10px 10px;
+  transition: all 0.5s ease-in-out;
+}
+.server-error-display {
+  opacity: 1 !important;
+  top: -1px !important;
+}
+.order-delivery-sub-container {
+  padding: 10px;
+  border-radius: 10px !important;
+}
+.order-delivery-sub-container .each-address {
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(240, 240, 240);
+  margin-bottom: 10px;
+}
+.selected-address {
+  background-color: rgb(153, 153, 153) !important;
+  color: white !important;
+}
+.order-delivery-sub-container .each-address:last-child {
+  border-bottom: none !important;
+}
+.order-sucess-container {
+  position: relative;
+  overflow: hidden;
+}
+.order-sucess-container .order-success-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.597);
+}
+.order-sucess-container .order-success-cover .order-success-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 80px;
+  transform: translate(-50%, -50%);
+}
+.order-server-error {
+  position: absolute;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: rgb(255, 100, 100);
+  color: white;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  top: -30px;
+  opacity: 0;
+  border-radius: 0 0 10px 10px;
+  transition: all 0.5s ease-in-out;
+}
+@media (max-width: 768px) {
+  .order-process-nav-sub1 h1 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 651px) {
+  .order-process-nav-sub1 h1 {
+    font-size: 18px;
+  }
+  .order-process-nav-sub2 svg {
+    font-size: 16px;
+  }
+  .order-process-nav-sub2 .progress-bar {
+    height: 1px;
+  }
+  .order-delivery-container h2,
+  .payment-mode-container h2 {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+  .order-process-container .continue-btn {
+    padding: 2px;
+    width: 60px;
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 8px 0;
+    font-size: 14px;
+  }
+  .order-process-btn-container button {
+    width: 60px;
+    padding: 2px;
+    font-size: 14px;
+  }
+  .payment-mode .card-payment .payment-input button {
+    font-size: 14px;
+    padding: 2px;
+  }
+  .payment-mode .card-payment .payment-input input {
+    height: 25px;
+  }
+  .payment-mode .card-payment .payment-card select {
+    width: 60px;
+    height: 25px;
+    font-size: 14px;
+  }
+  .order-sucess-container .order-success-item-details span:first-child {
+    font-size: 16px;
+  }
+  .order-sucess-container .order-success-item-details span:nth-child(2) {
+    font-size: 12px;
+  }
+  .order-sucess-container .order-success-item-details span:last-child {
+    font-size: 14px;
+  }
+  .order-sucess-container .amount-payable span:first-child {
+    font-size: 16px;
+  }
+  .order-sucess-container .amount-payable span:last-child {
+    font-size: 20px;
+  }
+  .order-delivery-container .no-address h5 {
+    font-size: 16px;
+  }
+  .order-delivery-container .no-address button {
+    font-size: 14px;
+    padding: 2px;
+  }
+  .order-delivery-container .server-error,
+  .order-server-error {
+    font-size: 10px;
+  }
+  .order-delivery-sub-container .each-address {
+    padding: 4px;
+    font-size: 12px;
+    height: 60px;
+  }
+}
+@media (max-width: 329px) {
+  .order-process-nav-sub1 h1 {
+    font-size: 16px;
+  }
+}

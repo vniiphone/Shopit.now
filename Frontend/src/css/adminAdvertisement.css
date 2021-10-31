@@ -1,0 +1,523 @@
+.admin-advertisement-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: 40px;
+}
+.admin-advertisement-container .ad-instructions {
+  width: 90%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  font-family: "Oswald", sans-serif;
+  padding: 20px;
+  border-radius: 5px;
+  pointer-events: none;
+  box-shadow: 0 0 4px rgb(199, 199, 199);
+}
+.admin-advertisement-container .ad-instructions li {
+  list-style: none;
+  color: #343434;
+  font-size: 13px;
+  margin-top: 10px;
+  padding-left: 10px;
+}
+.admin-advertisement-container .ad-instructions h2 {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+}
+.admin-advertisement-container .ad-product-search {
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  border: 1px solid #343434;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+}
+.admin-advertisement-container .ad-product-search input {
+  flex: 1;
+  background: none;
+  border: none;
+  height: 100%;
+  padding: 5px;
+  outline: none;
+}
+.admin-advertisement-container .ad-product-search button {
+  flex: 0.1;
+  outline: none;
+  color: white;
+  border: none;
+  background-color: #343434;
+}
+.admin-advertisement-container .ad-details {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  font-family: "Oswald", sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+.admin-advertisement-container .ad-details h5 {
+  font-size: 12px;
+}
+.admin-advertisement-container .ad-details h5 span {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 2px;
+}
+.ad-products-container {
+  position: relative;
+  width: 90%;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 200px;
+  height: 100%;
+}
+.ad-products-container .loading-icon {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.6;
+}
+
+.ad-products-container .search-error-container {
+  width: 200px;
+  margin: auto;
+}
+.ad-products-container .search-error-container h5 {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  margin-top: 20px;
+  font-size: 18px;
+  color: grey;
+}
+.ad-products-container .ad-products-sub-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  box-shadow: 0 0 4px grey;
+  padding: 5px 10px 5px 5px;
+  border-radius: 5px;
+  margin: 0px auto 20px;
+}
+.ad-products-container .ad-products-sub-container img {
+  width: 140px;
+  height: 100px;
+  border-radius: 5px;
+}
+.ad-products-container .ad-products-sub-container h5 {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-left: 15px !important;
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 200px;
+  pointer-events: none;
+}
+.ad-products-container .ad-products-sub-container button {
+  outline: none;
+  border: 1px solid #343434;
+  background-color: rgb(255, 183, 0);
+  font-family: "Oswald", sans-serif;
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 5px;
+  flex: 0.2;
+}
+.ad-products-container .ad-products-sub-container div:first-child {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 0.8;
+  overflow: hidden;
+}
+.ad-products-container .ad-each-products-container {
+  height: 260px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 20px 0;
+  padding: 10px 0;
+}
+.ad-each-products-container::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 10px;
+}
+
+.ad-each-products-container::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgb(245, 245, 245);
+}
+
+.ad-each-products-container::-webkit-scrollbar-thumb {
+  background: #a5a5a5;
+  border-radius: 10px;
+}
+
+.ad-each-products-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.ad-products-container h4 {
+  font-family: "Oswald", sans-serif;
+  font-size: 12px;
+  padding-left: 30px;
+  margin: 0;
+  margin-top: 20px !important;
+}
+.ad-products-container h4 span {
+  font-size: 18px;
+  font-weight: bold;
+  color: red;
+}
+.ad-products-container .place-ad-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.755);
+  transition: all 0.3s ease-in-out;
+}
+.place-ad-container-display {
+  opacity: 1 !important;
+  pointer-events: all !important;
+}
+.ad-image-drop-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-radius: 5px;
+  height: 350px;
+  max-width: 800px;
+  width: 95%;
+}
+.ad-image-drop-container h5 {
+  position: absolute;
+  top: 50% !important;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  color: #343434;
+}
+.ad-image-drop-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ad-image-drop-container > input {
+  display: none;
+}
+.ad-image-drop-container div:first-child {
+  width: 100%;
+  height: 85%;
+  border: 1px solid #343434;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+.ad-image-drop-container label {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: rgb(245, 245, 245) !important;
+}
+.ad-image-drop-container div:last-child {
+  display: flex;
+  justify-content: space-around;
+  background-color: #343434;
+  height: 15%;
+  width: 100%;
+  padding: 8px 0;
+  font-family: "Oswald", sans-serif;
+}
+.ad-image-drop-container button {
+  width: 80px;
+  text-align: center;
+  color: #343434;
+  background-color: rgb(255, 183, 0);
+  outline: none;
+  height: 30px;
+  padding: 4px;
+  font-size: 14px;
+  border: 1px solid #343434;
+  border-radius: 5px;
+}
+.ad-image-drop-container div button:last-child {
+  background-color: red !important;
+  color: white;
+}
+.ad-submit-loading {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: rgba(255, 255, 255, 0.33);
+}
+.ad-submit-loading-icon {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  transform: translate(-50%, -50%);
+}
+.place-ad-container h2 {
+  position: absolute;
+  color: white;
+  background-color: red;
+  width: 100%;
+  height: 20px;
+  padding: 4px;
+  top: 0;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 12px;
+}
+.place-ad-container h3 {
+  position: absolute;
+  color: white;
+  background-color: #343434;
+  width: 100%;
+  height: 45px;
+  padding-top: 10px !important;
+  padding: 4px;
+  top: 0;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+}
+.ad-handle-container {
+  width: 90%;
+  max-width: 600px;
+  height: 300px;
+  background-color: #343434;
+  margin: 20px auto;
+  border-radius: 5px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.ad-handle-container::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 10px;
+}
+
+.ad-handle-container::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgb(245, 245, 245);
+}
+
+.ad-handle-container::-webkit-scrollbar-thumb {
+  background: #a5a5a5;
+  border-radius: 10px;
+}
+
+.ad-handle-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.admin-advertisement-container h1 {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-size: 25px;
+  padding-top: 20px;
+}
+.ad-handle-container .ad-handle-load-anim {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  z-index: 99;
+  transform: translate(-50%, -50%);
+}
+.ad-handle-container .ad-handle-server-anim {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  z-index: 99;
+  transform: translate(-50%, -50%);
+}
+.ad-handle-container .ad-handle-server-anim h5 {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  color: grey;
+}
+.ad-details h5 {
+  position: relative;
+}
+.ad-details .count-loading {
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  top: -7px;
+  right: -45px;
+}
+.ad-details .count-error {
+  position: absolute;
+  color: red;
+  right: -8px;
+}
+.ad-handle-container .each-ad {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 6px;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  position: relative;
+}
+.ad-handle-container .each-ad:last-child {
+  border: none;
+}
+.ad-handle-container .each-ad div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.ad-handle-container .each-ad img {
+  width: 160px;
+  height: 80px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+.ad-handle-container .each-ad h4 {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: white;
+  width: 250px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+}
+.ad-handle-container .each-ad button {
+  width: 60px;
+  padding: 2px;
+  background-color: white;
+  border: 1px solid red;
+  color: red;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Oswald", sans-serif;
+  transition: all 0.1s ease-in-out;
+}
+.ad-handle-container .each-ad button:hover {
+  color: white;
+  background-color: red;
+}
+.each-ad-cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.57);
+}
+.admin-advertisement-container .ad-delete-error {
+  position: fixed;
+  color: white;
+  background-color: red;
+  padding: 6px;
+  font-size: 16px;
+  font-family: "Oswald", sans-serif;
+  border-radius: 5px;
+  right: 10px;
+  top: 50px;
+}
+@media (max-width: 601px) {
+  .ad-products-container .ad-products-sub-container button {
+    padding: 2px;
+    font-size: 12px;
+  }
+  .admin-advertisement-container .ad-product-search button {
+    flex: 0.2;
+  }
+  .admin-advertisement-container .ad-product-search {
+    height: 30px;
+    font-size: 16px;
+  }
+  .admin-advertisement-container .ad-instructions li {
+    font-size: 10px;
+    margin-top: 6px;
+  }
+  .admin-advertisement-container .ad-instructions h2 {
+    font-size: 16px;
+  }
+  .ad-image-drop-container {
+    height: 200px;
+  }
+  .ad-image-drop-container button {
+    width: 60px;
+    outline: none;
+    height: 25px;
+    padding: 2px;
+    font-size: 10px;
+    border-radius: 5px;
+  }
+  .ad-image-drop-container div:first-child {
+    height: 82%;
+  }
+  .ad-image-drop-container div:last-child {
+    height: 18%;
+  }
+  .ad-handle-container .each-ad img {
+    width: 100%;
+    height: 100px;
+    margin-right: 0px;
+  }
+  .ad-handle-container .each-ad h4 {
+    font-size: 16px;
+    width: 220px;
+  }
+  .ad-handle-container .each-ad span {
+    text-align: center;
+    width: 100%;
+    display: block;
+  }
+  .ad-handle-container .each-ad button {
+    width: 50px;
+    font-size: 10px;
+  }
+  .admin-advertisement-container .ad-delete-error {
+    font-size: 12px;
+  }
+}
