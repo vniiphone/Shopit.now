@@ -1,7 +1,6 @@
 package com.shopit.now.demo.bean.register.modules;
 
 import com.shopit.now.demo.bean.register.Register;
-import com.shopit.now.demo.bean.register.UserRoles;
 import com.shopit.now.demo.bean.register.modules.orders.Orders;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,12 +21,11 @@ public class User extends Register {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
+	@Column(name = "user_roles")
+	private String userRoles;
+
 	@OneToOne(cascade = CascadeType.ALL, mappedBy = "user", fetch = FetchType.LAZY)
 	private UserProfileImage userProfileImage;
-
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinColumn(name = "user_id")
-	private List<UserRoles> userRoles;
 
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
 	@JoinColumn(name = "user_id")

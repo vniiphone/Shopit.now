@@ -5,7 +5,6 @@ import com.shopit.now.demo.bean.auth.AuthenticationRequest;
 import com.shopit.now.demo.bean.views.TrendView;
 import com.shopit.now.demo.bean.products.images.WishlistView;
 import com.shopit.now.demo.bean.register.Register;
-import com.shopit.now.demo.bean.register.UserRoles;
 import com.shopit.now.demo.bean.register.modules.Address;
 import com.shopit.now.demo.bean.register.modules.SaveForLater;
 import com.shopit.now.demo.bean.register.modules.UserProfileImage;
@@ -26,8 +25,6 @@ public interface MandatoryUserServices {
     ResponseEntity<String> registerTheUser(Register register) throws UserAlreadyExists;
 
     ResponseEntity<String> addUserAddress(int id, Address address) throws UserNotFound;
-
-    List<UserRoles> roleGenerator();
 
     ResponseEntity<String> changePassword(int id, VerifyPassword password) throws InvalidCredentials, UserNotFound;
 

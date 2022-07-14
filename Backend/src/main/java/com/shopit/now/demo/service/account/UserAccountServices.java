@@ -7,7 +7,6 @@ import com.shopit.now.demo.bean.views.TrendView;
 import com.shopit.now.demo.bean.products.images.Thumbnail;
 import com.shopit.now.demo.bean.products.images.WishlistView;
 import com.shopit.now.demo.bean.register.Register;
-import com.shopit.now.demo.bean.register.UserRoles;
 import com.shopit.now.demo.bean.register.modules.*;
 import com.shopit.now.demo.bean.register.modules.orders.*;
 import com.shopit.now.demo.bean.register.modules.utils.ConfirmPassword;
@@ -108,15 +107,6 @@ public class UserAccountServices implements MandatoryUserServices {
 			throw new InvalidCredentials("Username or Password wrong");
 		}
 		return jwtUtil.generateToken(authenticationRequest.getEmail());
-	}
-
-	@Override
-	public List<UserRoles> roleGenerator() {
-		List<UserRoles> roles = new ArrayList<>();
-		UserRoles userRoles = new UserRoles();
-		userRoles.setRoles("USER");
-		roles.add(userRoles);
-		return roles;
 	}
 
 	@Override
@@ -813,6 +803,12 @@ public class UserAccountServices implements MandatoryUserServices {
 
 	public ResponseEntity<String> checkValidJWt() {
 		return new ResponseEntity<String>("Verified", HttpStatus.OK);
+	}
+
+	private String roleGenerator() {
+		StringJoiner roles = new StringJoiner(",");
+		roles.add("USER");
+		return roles.toString();
 	}
 
 }

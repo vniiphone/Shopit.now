@@ -21,7 +21,7 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 	@Query("select count(u) from User u where u.email=:email_id")
 	int findUserByMail(@Param("email_id") String email);
 
-	@Query("select u from User  u order by u.fullname asc ")
+	@Query("select u from User u order by u.fullname asc ")
 	List<User> getAllUsers();
 
 	@Query("select u.cart from User u where u.id=:uid")
