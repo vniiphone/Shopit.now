@@ -9,8 +9,6 @@ import com.shopit.now.demo.bean.products.images.WishlistView;
 import com.shopit.now.demo.bean.register.Register;
 import com.shopit.now.demo.bean.register.modules.*;
 import com.shopit.now.demo.bean.register.modules.orders.*;
-import com.shopit.now.demo.bean.register.modules.utils.ConfirmPassword;
-import com.shopit.now.demo.bean.register.modules.utils.VerifyPassword;
 import com.shopit.now.demo.customexception.custom.*;
 import com.shopit.now.demo.jwtgenerator.JwtUtil;
 import com.shopit.now.demo.repository.*;
@@ -148,18 +146,14 @@ public class UserAccountServices implements MandatoryUserServices {
 	public ResponseEntity<String> changePassword(int id, String currentPassword, String newPassword)
 			throws InvalidCredentials, UserNotFound {
 
-		VerifyPassword verifyPassword = new VerifyPassword();
-		verifyPassword.setPassword(currentPassword);
-		verifyPassword.setNewPassword(newPassword);
-		
 		Optional<User> user = userRepository.findById(id);
 		if (user.isEmpty())
 			throw new UserNotFound("User not found");
-		else if (!bCryptPasswordEncoder.matches(verifyPassword.getPassword(), user.get().getPassword()))
+		else if (!bCryptPasswordEncoder.matches(currentPassword, user.get().getPassword()))
 			throw new InvalidCredentials("User password wrong");
 
 		try {
-			String password = bCryptPasswordEncoder.encode(verifyPassword.getNewPassword());
+			String password = bCryptPasswordEncoder.encode(newPassword);
 			user.get().setPassword(password);
 			userRepository.save(user.get());
 			return new ResponseEntity<>("Password successfully changed", HttpStatus.OK);

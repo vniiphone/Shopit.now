@@ -1,17 +1,13 @@
 package com.shopit.now.demo.service.account;
 
 import com.shopit.now.demo.bean.views.UserView;
-import com.shopit.now.demo.bean.auth.AuthenticationRequest;
 import com.shopit.now.demo.bean.views.TrendView;
 import com.shopit.now.demo.bean.products.images.WishlistView;
-import com.shopit.now.demo.bean.register.Register;
 import com.shopit.now.demo.bean.register.modules.Address;
 import com.shopit.now.demo.bean.register.modules.SaveForLater;
 import com.shopit.now.demo.bean.register.modules.UserProfileImage;
 import com.shopit.now.demo.bean.register.modules.orders.*;
 import com.shopit.now.demo.bean.register.modules.CartDetails;
-import com.shopit.now.demo.bean.register.modules.utils.ConfirmPassword;
-import com.shopit.now.demo.bean.register.modules.utils.VerifyPassword;
 import com.shopit.now.demo.customexception.custom.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.multipart.MultipartFile;

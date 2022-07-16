@@ -1,14 +1,10 @@
 package com.shopit.now.demo.controller;
 
 import com.shopit.now.demo.bean.views.UserView;
-import com.shopit.now.demo.bean.auth.AuthenticationRequest;
 import com.shopit.now.demo.bean.views.TrendView;
 import com.shopit.now.demo.bean.products.images.WishlistView;
-import com.shopit.now.demo.bean.register.Register;
 import com.shopit.now.demo.bean.register.modules.*;
 import com.shopit.now.demo.bean.register.modules.orders.*;
-import com.shopit.now.demo.bean.register.modules.utils.ConfirmPassword;
-import com.shopit.now.demo.bean.register.modules.utils.VerifyPassword;
 import com.shopit.now.demo.customexception.custom.*;
 import com.shopit.now.demo.service.account.UserAccountServices;
 import org.springframework.beans.factory.annotation.Autowired;
