@@ -143,11 +143,13 @@ public class ProductServices implements ProductMandatoryServices{
         return advertisement;
     }
 
-    @Override
-    public Advertisement displaySpecificAd(){
-        List<Advertisement> advertisements= advertisementRepository.findAll();
-        return advertisements.get(advertisements.size()-1);
-    }
+	@Override
+	public Advertisement displaySpecificAd() {
+		List<Advertisement> advertisements = advertisementRepository.findAll();
+		if (advertisements.size() > 1)
+			return advertisements.get(advertisements.size() - 1);
+		return null;
+	}
 
     @Override
     public List<View> getCategoryBasedProducts(int id) {
