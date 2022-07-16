@@ -34,8 +34,13 @@ class DeleteAccount extends Component {
       await axios
         .post(
           `${URL(API_ENDPOINT.userOperations)}/delete-user/${id}`,
-          { password: deletionPass },
-          { headers: { Authorization: getJwt() } }
+          {},
+          {
+            headers: {
+              Authorization: getJwt(),
+              "user-password": deletionPass,
+            },
+          }
         )
         .then(() => {
           removeJwt();

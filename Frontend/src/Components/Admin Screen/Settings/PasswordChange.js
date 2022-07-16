@@ -54,11 +54,14 @@ class PasswordChange extends Component {
     await axios
       .put(
         `${URL(API_ENDPOINT.userOperations)}/update-password/${id}`,
+        {},
         {
-          password: value.current,
-          newPassword: value.password,
-        },
-        { headers: { Authorization: getJwt() } }
+          headers: {
+            Authorization: getJwt(),
+            "current-password": value.current,
+            "new-password": value.password,
+          },
+        }
       )
       .then(() => {
         this.handleReLogin(sub, value.password);

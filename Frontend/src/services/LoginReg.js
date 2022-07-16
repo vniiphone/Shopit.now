@@ -3,11 +3,38 @@ import axios from "axios";
 import { api_endpoints as API_ENDPOINT, formUrl as URL } from "../api/api";
 
 function userLogin(email, password) {
-  return axios.post(`${URL(API_ENDPOINT.userApi)}/login`, { email, password });
+  const header = {
+    "Content-Type": "application/json",
+    "user-email": email,
+    "user-password": password,
+  };
+
+  return axios.post(
+    `${URL(API_ENDPOINT.userApi)}/login`,
+    {},
+    {
+      headers: header,
+    }
+  );
 }
 
 function userRegistration(register) {
-  return axios.post(`${URL(API_ENDPOINT.userApi)}/register`, register);
+  const { fullname, email, mobile, password } = register;
+  const header = {
+    "Content-Type": "application/json",
+    "user-email": email,
+    "user-password": password,
+    "user-mobile": mobile,
+    "user-fullname": fullname,
+  };
+
+  return axios.post(
+    `${URL(API_ENDPOINT.userApi)}/register`,
+    {},
+    {
+      headers: header,
+    }
+  );
 }
 
 // Storing JWT

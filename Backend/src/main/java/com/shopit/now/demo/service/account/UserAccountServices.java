@@ -75,8 +75,15 @@ public class UserAccountServices implements MandatoryUserServices {
 	}
 
 	@Override
-	public ResponseEntity<String> registerTheUser(Register register) throws UserAlreadyExists {
+	public ResponseEntity<String> registerTheUser(String fullname, String email, String password, String mobile)
+			throws UserAlreadyExists {
 
+		Register register = new Register();
+		register.setEmail(email);
+		register.setFullname(fullname);
+		register.setMobile(mobile);
+		register.setPassword(password);
+		
 		int userExists = userRepository.findUserByMail(register.getEmail().toLowerCase());
 		if (userExists != 0)
 			throw new UserAlreadyExists("User Already Exists");
@@ -99,7 +106,12 @@ public class UserAccountServices implements MandatoryUserServices {
 	}
 
 	@Override
-	public String userLogin(AuthenticationRequest authenticationRequest) throws InvalidCredentials {
+	public String userLogin(String email, String password) throws InvalidCredentials {
+		
+		AuthenticationRequest authenticationRequest = new AuthenticationRequest();
+		authenticationRequest.setEmail(email);
+		authenticationRequest.setPassword(password);
+		
 		try {
 			authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(authenticationRequest.getEmail(),
 					authenticationRequest.getPassword()));
@@ -133,9 +145,13 @@ public class UserAccountServices implements MandatoryUserServices {
 	}
 
 	@Override
-	public ResponseEntity<String> changePassword(int id, VerifyPassword verifyPassword)
+	public ResponseEntity<String> changePassword(int id, String currentPassword, String newPassword)
 			throws InvalidCredentials, UserNotFound {
 
+		VerifyPassword verifyPassword = new VerifyPassword();
+		verifyPassword.setPassword(currentPassword);
+		verifyPassword.setNewPassword(newPassword);
+		
 		Optional<User> user = userRepository.findById(id);
 		if (user.isEmpty())
 			throw new UserNotFound("User not found");
@@ -153,14 +169,13 @@ public class UserAccountServices implements MandatoryUserServices {
 	}
 
 	@Override
-	public ResponseEntity<String> deleteAccount(int id, ConfirmPassword confirmPassword)
-			throws UserNotFound, InvalidCredentials {
+	public ResponseEntity<String> deleteAccount(int id, String password) throws UserNotFound, InvalidCredentials {
 
 		Optional<User> user = userRepository.findById(id);
 		if (user.isEmpty())
 			throw new UserNotFound("User not found");
 
-		if (!bCryptPasswordEncoder.matches(confirmPassword.getPassword(), user.get().getPassword()))
+		if (!bCryptPasswordEncoder.matches(password, user.get().getPassword()))
 			throw new InvalidCredentials("User password wrong");
 		try {
 			userRepository.deleteById(id);

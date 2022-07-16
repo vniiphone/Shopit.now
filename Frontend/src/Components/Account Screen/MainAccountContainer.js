@@ -82,8 +82,13 @@ class MainAccountContainer extends Component {
       await axios
         .post(
           `${URL(API_ENDPOINT.userOperations)}/delete-user/${user.id}`,
-          { password: confirmPassword },
-          { headers: { Authorization: getJwt() } }
+          {},
+          {
+            headers: {
+              Authorization: getJwt(),
+              "user-password": confirmPassword,
+            },
+          }
         )
         .then(() => {
           removeJwt();
@@ -116,11 +121,14 @@ class MainAccountContainer extends Component {
     await axios
       .put(
         `${URL(API_ENDPOINT.userOperations)}/update-password/${user.id}`,
+        {},
         {
-          password: value.current,
-          newPassword: value.password,
-        },
-        { headers: { Authorization: getJwt() } }
+          headers: {
+            Authorization: getJwt(),
+            "current-password": value.current,
+            "new-password": value.password,
+          },
+        }
       )
       .then(() => {
         this.handleReLogin(user.sub, value.password);

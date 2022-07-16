@@ -28,13 +28,16 @@ public class UserAccountController {
 	private UserAccountServices accountServices;
 
 	@PostMapping("/auth/register")
-	ResponseEntity<String> userRegistration(@RequestBody Register register) throws UserAlreadyExists {
-		return accountServices.registerTheUser(register);
+	ResponseEntity<String> userRegistration(@RequestHeader("user-email") String email,
+			@RequestHeader("user-fullname") String fullname, @RequestHeader("user-mobile") String mobile,
+			@RequestHeader("user-password") String password) throws UserAlreadyExists {
+		return accountServices.registerTheUser(fullname, email, password, mobile);
 	}
 
 	@PostMapping("/auth/login")
-	public String authenticateUser(@RequestBody AuthenticationRequest authenticationRequest) throws Exception {
-		return accountServices.userLogin(authenticationRequest);
+	public String authenticateUser(@RequestHeader("user-email") String email,
+			@RequestHeader("user-password") String password) throws Exception {
+		return accountServices.userLogin(email, password);
 	}
 
 	@GetMapping("/admin/all-users")
@@ -58,15 +61,16 @@ public class UserAccountController {
 	}
 
 	@PutMapping("/user/update-password/{id}")
-	ResponseEntity<String> handlePasswordUpdation(@PathVariable int id, @RequestBody VerifyPassword password)
+	ResponseEntity<String> handlePasswordUpdation(@PathVariable int id,
+			@RequestHeader("current-password") String password, @RequestHeader("new-password") String newPassword)
 			throws InvalidCredentials, UserNotFound {
-		return accountServices.changePassword(id, password);
+		return accountServices.changePassword(id, password, newPassword);
 	}
 
 	@PostMapping("/user/delete-user/{id}")
-	ResponseEntity<String> handleAccountDeletion(@PathVariable int id, @RequestBody ConfirmPassword confirmPassword)
+	ResponseEntity<String> handleAccountDeletion(@PathVariable int id, @RequestHeader("user-password") String password)
 			throws UserNotFound, InvalidCredentials {
-		return accountServices.deleteAccount(id, confirmPassword);
+		return accountServices.deleteAccount(id, password);
 	}
 
 	@PutMapping("/user/update-address/{userId}")
