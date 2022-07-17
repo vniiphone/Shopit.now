@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "../Icons/logo-now";
+import APP_LOGO_BLACK from "../Icons/app-logo-black.svg";
 import { Link } from "react-router-dom";
 import { faAngleLeft, faCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -166,8 +166,7 @@ class Orders extends Component {
             <span className="go-back">Go Back</span>
           </Link>
           <Link to="/" className="order-logo-container">
-            <span>Shopit</span>
-            <span>{logo}</span>
+            <img src={APP_LOGO_BLACK} alt="order app logo" />
           </Link>
         </div>
         <div className="order-container-head">

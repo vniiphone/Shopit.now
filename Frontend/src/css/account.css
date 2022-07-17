@@ -340,24 +340,11 @@
   pointer-events: all !important;
   z-index: 999;
 }
-.account-sub-container .logo-container {
+.account-sub-container .logo-container img {
   position: fixed;
-  top: -5px;
-  left: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  text-decoration: none;
-}
-.account-sub-container .logo-container span:first-child {
-  font-family: "Gugi", cursive;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 56px;
-  padding-right: 5px;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  top: 10px;
+  left: 10px;
+  width: 110px;
 }
 
 @media (max-width: 500px) {
@@ -389,8 +376,10 @@
   .change-container .close-btn {
     transform: scale(1.7);
   }
-  .account-sub-container .logo-container span:first-child {
-    font-size: 18px;
+  .account-sub-container .logo-container img {
+    top: 5px;
+    left: 5px;
+    width: 80px;
   }
   .user-image-container .camera-icon {
     width: 25px;
