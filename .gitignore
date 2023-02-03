@@ -1,5 +1,9 @@
-	Backend/.idea/
-	Backend/shopitnow.iml
-	Backend/target/
-	Frontend/.eslintcache
-	Frontend/node_modules/
+Backend/.idea/
+Backend/shopitnow.iml
+Backend/target/
+Frontend/.eslintcache
+Frontend/node_modules/
+Backend/.classpath
+Backend/.project
+Backend/.settings/
+

@@ -69,21 +69,26 @@
   margin-bottom: 20px;
   pointer-events: none;
   height: 60px;
+  position: relative;
 }
 .role-admin-l-cont .admin-logo-container span:first-child {
-  font-family: "Gugi", cursive;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  padding-right: 5px;
   transition: all 0.2s ease-in-out;
 }
+.role-admin-l-cont .admin-logo-container span:first-child img {
+  width: 100px;
+}
 .role-admin-l-cont .admin-logo-container span:last-child {
-  transform: scale(0.8);
-  transition: all 0.2s 0.1s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.admin-logo-container .now-logo-hide {
+  opacity: 0;
 }
 .now-logo {
-  margin-right: 65%;
+  transition: all 0.2s 0.1s ease-in-out;
+  opacity: 1 !important;
 }
 .role-admin-nav div h3 {
   position: absolute;
